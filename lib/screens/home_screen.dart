@@ -115,7 +115,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Expanded(
       child: ListView.separated(
           itemBuilder: (context, index) {
-            final AddWater mywater = waterlist[index];
+            int reverse = waterlist.length - 1 - index;
+            final AddWater mywater = waterlist[reverse];
             return ListTile(
               title: Text(
                 '${mywater.time.hour} : ${mywater.time.minute}',
